@@ -1,0 +1,302 @@
+/* The Body Element */
+body {
+    min-height: 100vh;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* The Main DIV */
+#main {
+    display: flex;
+    flex-direction: row;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+/* The Header */
+.header {
+    text-align: center;
+}
+
+.logo-box {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.logo {
+    margin: auto;
+}
+
+/* Health Progress Bar */
+.container {
+    background: #fafafa;
+    height: 10px;
+    width: 50%;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+.bar-container {
+    background: #f0f0f0;
+    height: 10px;
+    width: 100%;
+    border-radius: 10px;
+}
+.bar {
+    background: #C72C2C;
+    background: -webkit-linear-gradient(to left, #D62121, #C72C2C);
+    background: linear-gradient(to left, #D62121, #C72C2C);
+    height: 10px;
+    width: 100%;
+    border-radius: 10px;
+    transition: width 400ms;
+}
+
+/* Button Element */
+button {
+    border: none;
+    border-radius: 8px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    outline: none;
+}
+button:disabled {
+    background: #dddddd;
+    pointer-events: none;
+}
+
+/* The attack Button */
+.attack {
+    display: inline-block;
+    margin: 7px;
+    padding: 15px 25px;
+    font-size: 24px;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #f44336;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+}
+.attack:hover {background-color: #d3332c}
+.attack:active {
+    background-color: #d3332c;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+/* The Defend Button */
+.defence {
+    border-radius: 15px;
+    outline: none;
+    margin: 7px;
+    position: relative;
+    background-color: #008CBA;
+    border: none;
+    font-size: 24px;
+    color: #FFFFFF;
+    padding: 20px;
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+}
+.defence:after {
+    content: "";
+    background: #f1f1f1;
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 350%;
+    margin-left: -20px !important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 0.8s
+}
+
+.defence:active:after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s
+}
+
+/* The new game and Rules Button */
+.new-game, .rules {
+    background-color: #a7b0b5;
+    color: #ffffff;
+    margin-left: 20px;
+    font-size: 20px;
+}
+
+/* Player info Card */
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 200px;
+    text-align: center;
+    margin: 20px;
+    width: 100%;
+    height: auto;
+}
+.card img {
+    width: 100px;
+    height: 100px;
+}
+
+.title {
+    color: grey;
+    font-size: 18px;
+}
+
+/* Game Board */
+table {
+    background-color: lightgray;
+    margin: auto;
+    border: 10px solid #84888a;
+}
+td {
+  background: #ffffff;
+  font-size: 0 !important;
+  width: 65px;
+  height: 65px;
+    text-align: center;
+}
+td img {
+    height: 100%;
+    width: 100%;
+    margin: auto;
+}
+
+/* Game Obstacle */
+.obstacle {
+    background-image: url("../images/rock.png");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+/* Game Weapons */
+.weapon1 {
+    background-image: url("../images/fork.png");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.weapon2 {
+    background-image: url("../images/pan.png");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.weapon3 {
+    background-image: url("../images/bat.png");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.weapon4 {
+    background-image: url("../images/hammer.png");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+/* Players */
+.player1 {
+    background-image: url("../images/tom.png");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.player2 {
+    background-image: url("../images/jerry.png");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+/* Movement Highlight */
+.highlight {
+    background-color: #cccccc;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+
+/* Modal Content/Box */
+.modal-content {
+    font-size: 17px;
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {top: -300px; opacity: 0}
+    to {top: 0; opacity: 1}
+}
+@keyframes animatetop {
+    from {top: -300px; opacity: 0}
+    to {top: 0; opacity: 1}
+}
+
+/* The close Button */
+.close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Modal Header */
+.modal-header {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: white;
+}
+
+/* Modal Body */
+.modal-body {
+    padding: 2px 16px;
+}

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<head>
+    <title>Turn base board game</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<!-- Header Section -->
+<header class="header">
+    <div class="logo-box">
+        <img class="logo" src="images/logo.png" alt="Logo" style="width:300px">
+    </div>
+    <div class="options">
+        <button id="new-game" class="new-game">New game</button>
+        <button id="rules-btn" class="rules">Rules</button>
+    </div>
+</header>
+<!-- Main Section -->
+<div id="main">
+    <!-- Player1 info -->
+    <div id="card-left" class="card">
+        <h1>Tom</h1>
+        <img src="images/tom.png" alt="Tom">
+        <p class="title">Player One</p>
+        <p class="title">Health: <span id="player1-health">100%</span></p>
+        <div class="container">
+            <div class="bar-container">
+                <div class="bar" id="bar-player1"></div>
+            </div>
+        </div>
+
+        <h1>Weapon</h1>
+        <img id="player1-weapon-image" src="images/fork.png" alt="Weapon">
+        <p id="player1-weapon-name" class="title">Fork</p>
+        <p class="title">Damage point: <span id="player1-weapon-damage-point">10</span></p>
+        <button id="player1-attack" class="attack">Attack</button>
+        <button id="player1-defend" class="defence">Defend</button>
+    </div>
+
+    <!-- The game Board -->
+    <table id="grid">
+    </table>
+
+    <!-- Player2 info -->
+    <div id="card-right" class="card">
+        <h1>Jerry</h1>
+        <img src="images/jerry.png" alt="Jerry">
+        <p class="title">Player Two</p>
+        <p class="title">Health: <span id="player2-health">100%</span></p>
+        <div class="container">
+            <div class="bar-container">
+                <div class="bar" id="bar-player2"></div>
+            </div>
+        </div>
+
+        <h1>Weapon</h1>
+        <img id="player2-weapon-image" src="images/fork.png" alt="Weapon">
+        <p id="player2-weapon-name" class="title">Fork</p>
+        <p class="title">Damage point: <span id="player2-weapon-damage-point">10</span></p>
+        <button id="player2-attack" class="attack">Attack</button>
+        <button id="player2-defend" class="defence">Defend</button>
+    </div>
+
+    <!-- Rules Section -->
+    <div id="rules-section" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span id="close-icon" class="close">&times;</span>
+                <h2>Game Rules</h2>
+            </div>
+            <div class="modal-body">
+                <h3>Movement</h3>
+                <p>For each turn, a player can move from one to three boxes(horizontally or vertically) before ending their turn. They obviously can not pass through obstacles directly.</p>
+                <p>If a player passes over a box containing a weapon, they leave their current weapon on site and replace it with the new one.</p>
+                <h3>Fight!</h3>
+                <p>If players stand next to each other(horizontally or vertically), a battle begins.</p>
+                <p>During combat, the game works is as follows:</p>
+                <ul>
+                    <li>Each player plays in turn;</li>
+                    <li>The player can choose to attack or defend against the next shot;</li>
+                    <li>The damage depends on the player's weapon;</li>
+                    <li>If the player chooses to defend themselves, they sustain 50% less damage than normal</li>
+                    <li>As soon as the health of a player (initially 100) falls to 0, they lose and the game is over.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</div>
+<script src="js/jquery-3.5.1.min.js"></script>
+<script src="js/map.js"></script>
+<script src="js/obstacle.js"></script>
+<script src="js/players.js"></script>
+<script src="js/weapon.js"></script>
+<script src="js/box.js"></script>
+<script src="js/movement.js"></script>
+<script src="js/combat.js"></script>
+</body>
+</html>
